@@ -98,7 +98,7 @@ def load_deployment_report():
     """Load the deployment recommendation markdown report if available."""
     path = REPORTS_DIR / "deployment_recommendation.md"
     if path.exists():
-        return path.read_text()
+        return path.read_text(encoding="utf-8")
     return None
 
 
