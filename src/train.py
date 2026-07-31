@@ -378,8 +378,8 @@ human-in-the-loop review process for borderline cases.
 """
 
     config.REPORTS_DIR.mkdir(parents=True, exist_ok=True)
-    with open(config.DEPLOYMENT_REPORT_PATH, "w") as f:
-        f.write(report)
+    with open(config.DEPLOYMENT_REPORT_PATH, "w", encoding="utf-8") as f:
+    f.write(report)
 
     logger.info(f"Deployment recommendation report saved to: {config.DEPLOYMENT_REPORT_PATH}")
     return report
